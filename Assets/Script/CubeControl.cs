@@ -10,7 +10,7 @@ public class CubeControl : MonoBehaviour
 
     void Start()
     {
-        
+        GetComponent<Renderer>().material.color = cubeData.color;
     }
 
     

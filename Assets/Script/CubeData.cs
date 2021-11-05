@@ -6,9 +6,12 @@ using UnityEngine;
 public class CubeData : ScriptableObject
 {
 
-    [SerializeField] int _speed;
+    [SerializeField] private int _speed;
     public int Speed { get { return _speed; } }
 
+    [SerializeField] Color _color;
+
+    public Color color { get { return _color; } }
 
 
 
