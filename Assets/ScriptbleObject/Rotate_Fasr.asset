@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0b6e8407a3d6084eb807c949ccfdc32, type: 3}
   m_Name: Rotate_Fasr
   m_EditorClassIdentifier: 
-  _speed: 100
+  _speed: 150
+  _color: {r: 0, g: 1, b: 0.10835743, a: 0}
