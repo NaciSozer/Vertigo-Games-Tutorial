@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace ShotLesson.Camera
+{
+
 public class CameraControllers : MonoBehaviour
 {
     [SerializeField] CameraSettings _cameraSettings;
@@ -32,4 +35,5 @@ public class CameraControllers : MonoBehaviour
     }
 
 
+}
 }

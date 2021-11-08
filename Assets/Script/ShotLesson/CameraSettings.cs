@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+namespace ShotLesson.Camera 
+{ 
+
 [CreateAssetMenu(menuName = ("ShotLesson/Camera/Camera Settings"))]
 public class CameraSettings : ScriptableObject
 {
@@ -21,4 +25,5 @@ public class CameraSettings : ScriptableObject
     [SerializeField] private float _positionLerpSpeed;
     public float PositionLerpSpeed { get { return _positionLerpSpeed; } }
 
+}
 }
