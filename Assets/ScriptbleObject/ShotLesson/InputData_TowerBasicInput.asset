@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21b5ee369b1ebd943984b9ef0bd352ed, type: 3}
-  m_Name: LocalPlayerInputData
+  m_Name: InputData_TowerBasicInput
   m_EditorClassIdentifier: 
   horizontalInput: 0
   verticalInput: 0
-  _axisActive: 1
-  AxisNameHorizontal: Horizontal
-  AxisNameVertical: Vertical
-  _keyBaseHorizontalActive: 0
-  PositiveHorizontalKeyCode: 0
-  NegativeHorizontalKeyCode: 0
+  _axisActive: 0
+  AxisNameHorizontal: 
+  AxisNameVertical: 
+  _keyBaseHorizontalActive: 1
+  PositiveHorizontalKeyCode: 113
+  NegativeHorizontalKeyCode: 101
   _keyBaseVerticalActive: 0
-  PositiveVericalKeyCode: 119
-  NegativeVerticalKeyCode: 115
+  PositiveVericalKeyCode: 0
+  NegativeVerticalKeyCode: 0
   lerpSpeed: 1

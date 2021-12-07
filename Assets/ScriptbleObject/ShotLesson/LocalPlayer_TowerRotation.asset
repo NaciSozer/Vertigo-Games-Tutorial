@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b5ee369b1ebd943984b9ef0bd352ed, type: 3}
-  m_Name: LocalPlayerInputRotation
+  m_Script: {fileID: 11500000, guid: 5b4ea9b451a8a4f46aaa5a896386d21e, type: 3}
+  m_Name: LocalPlayer_TowerRotation
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  verticalInput: 0
+  towerRotationSpeed: 1
