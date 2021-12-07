@@ -9,20 +9,16 @@ namespace ShotLesson.PlayerInput
 
     public class PlayerInput : MonoBehaviour
     {
-        [SerializeField] PlayerInputData _playerInputData;
-        [SerializeField] PlayerInputData _playerRotationInputData;
-        [SerializeField] private Vector3 _lastMouseInput;
-
+        [SerializeField] private PlayerInputData[] _inputDataArray;
+        
 
         void Update()
         {
-            _playerInputData.horizontalInput = Input.GetAxis("Horizontal");
+            for (int i = 0; i < _inputDataArray.Length; i++)
+            {
+                _inputDataArray[i].ProcsesInput(); 
 
-            _playerInputData.verticalInput = Input.GetAxis("Vertical");
-
-
-            _playerRotationInputData.horizontalInput = (Input.mousePosition.x - _lastMouseInput.x);
-            _lastMouseInput = Input.mousePosition;
+            }
 
         }
     }
