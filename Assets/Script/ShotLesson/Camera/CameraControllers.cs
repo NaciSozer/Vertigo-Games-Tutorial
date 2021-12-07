@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ShotLesson.Shooting;
 
-namespace ShotLesson.Camera
+namespace ShotLesson.LocalCamera
 {
 
 public class CameraControllers : MonoBehaviour
@@ -10,11 +11,22 @@ public class CameraControllers : MonoBehaviour
     [SerializeField] CameraSettings _cameraSettings;
     [SerializeField] private Transform _targetTransform;
     [SerializeField] private Transform _cameraTransform;
-    
+        public ShootingManager _shootingManager;
     private void Update()
     {
         CameraRotationFollow();
         CameraPositionFollow();
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _shootingManager.Shooting(_cameraTransform.position, _cameraTransform.forward);
+
+               
+            }
+
+
+
+            
     }
 
     private void CameraRotationFollow()

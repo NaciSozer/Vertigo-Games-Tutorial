@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace ShotLesson.Camera 
+namespace ShotLesson.LocalCamera
 { 
 
 [CreateAssetMenu(menuName = ("ShotLesson/Camera/Camera Settings"))]
