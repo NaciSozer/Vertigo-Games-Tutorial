@@ -16,18 +16,17 @@ namespace ShotLesson.PlayerInput
 
         [Header("Axis Base Control")]
         [SerializeField] private bool _axisActive;
-        public string AxisNameHorizontal;
-        public string AxisNameVertical;
+        [SerializeField] private string AxisNameHorizontal;
+        [SerializeField] private string AxisNameVertical;
 
         [Header("Key Base Control")]
         [SerializeField] private bool _keyBaseHorizontalActive;
-        public KeyCode PositiveHorizontalKeyCode;
-        public KeyCode NegativeHorizontalKeyCode;
+        [SerializeField] private KeyCode PositiveHorizontalKeyCode;
+        [SerializeField] private KeyCode NegativeHorizontalKeyCode;
         [SerializeField] private bool _keyBaseVerticalActive;
-        public KeyCode PositiveVericalKeyCode;
-        public KeyCode NegativeVerticalKeyCode;
-        public float lerpSpeed = 1;
-
+        [SerializeField] private KeyCode PositiveVericalKeyCode;
+        [SerializeField] private KeyCode NegativeVerticalKeyCode;
+        [SerializeField] private float _increaseAmount = 0.15f;
 
         public void ProcsesInput()
         {
@@ -61,21 +60,21 @@ namespace ShotLesson.PlayerInput
             bool positiveActive = Input.GetKey(positive);
             bool negativeActive = Input.GetKey(negative);
 
-            if(positiveActive && !negativeActive)
+            if(positiveActive)
             {
-                value = Mathf.Lerp(horizontalInput , 1 , Time.time * lerpSpeed);
+                value += _increaseAmount;
             }
 
-            else if(negativeActive && !positiveActive)
+            else if(negativeActive)
             {
-                value = Mathf.Lerp(horizontalInput, -1, Time.time * lerpSpeed);
+                value -= _increaseAmount;
             }
             else
             {
-                value = Mathf.Lerp(horizontalInput, 0, Time.time * lerpSpeed);
+                value = 0;
             }
 
-
+            value = Mathf.Clamp(value, -1, 1);
         }
     }
 }
