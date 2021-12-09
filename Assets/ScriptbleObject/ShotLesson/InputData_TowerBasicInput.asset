@@ -23,4 +23,4 @@ MonoBehaviour:
   _keyBaseVerticalActive: 0
   PositiveVericalKeyCode: 0
   NegativeVerticalKeyCode: 0
-  lerpSpeed: 1
+  _increaseAmount: 0.15

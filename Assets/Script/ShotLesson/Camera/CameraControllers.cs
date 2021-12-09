@@ -9,13 +9,15 @@ namespace ShotLesson.LocalCamera
 public class CameraControllers : MonoBehaviour
 {
     [SerializeField] CameraSettings _cameraSettings;
-    [SerializeField] private Transform _targetTransform;
+    [SerializeField] private Transform _rotationTransform;
+    [SerializeField] private Transform _positionTarget;
     [SerializeField] private Transform _cameraTransform;
-        public ShootingManager _shootingManager;
+    public ShootingManager _shootingManager;
     private void Update()
     {
-        CameraRotationFollow();
-        CameraPositionFollow();
+            CameraPositionFollow();
+            CameraRotationFollow();
+        
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -33,15 +35,13 @@ public class CameraControllers : MonoBehaviour
     {
         _cameraTransform.rotation = Quaternion.Lerp(
             _cameraTransform.rotation,
-            Quaternion.LookRotation(_targetTransform.position - _cameraTransform.position),
+            Quaternion.LookRotation(_rotationTransform.forward),
             Time.deltaTime * _cameraSettings.RotationSpeed);
     }
 
     private void CameraPositionFollow()
     {
-        _cameraTransform.position = Vector3.Lerp(_cameraTransform.position,
-            _targetTransform.position + _cameraSettings.PositionOffset,
-           Time.deltaTime * _cameraSettings.PositionLerpSpeed);
+            _cameraTransform.localPosition = _cameraSettings.PositionOffset;
 
 
     }

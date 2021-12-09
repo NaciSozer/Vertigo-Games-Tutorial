@@ -11,7 +11,5 @@ namespace ShotLesson.PlayerControls
         public float _horiontalSpeed = 0.1f;
         public float _verticalSpeed = 0.1f;
 
-
-
     }
 }
