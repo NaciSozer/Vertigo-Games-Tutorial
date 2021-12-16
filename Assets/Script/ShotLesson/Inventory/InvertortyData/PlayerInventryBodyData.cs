@@ -12,6 +12,8 @@ namespace ShotLesson.Inventory
         public override void CreatItem(InventoryController _inventoryController)
         {
             var InstantiatePrefab = InstantiarePrefabInToParent(_inventoryController.parent);
+
+            
         }
     }
 }
