@@ -9,5 +9,9 @@ namespace ShotLesson.Inventory
 
         public abstract void CreatItem(InventoryController _inventoryController);
 
+        public virtual void Destroy()
+        {
+            Destroy(this);
+        }
     }
 }
